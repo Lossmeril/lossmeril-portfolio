@@ -8,7 +8,7 @@ const withTransition = OriginalComponent => {
     <>
       <OriginalComponent />
       <motion.div
-        style={{ background: theme.colors.green.primary }}
+        style={{ background: 'HotPink' }}
         className="transition slide-in"
         initial={{ scaleX: 0 }}
         animate={{ scaleX: 0 }}
@@ -17,11 +17,28 @@ const withTransition = OriginalComponent => {
       ></motion.div>
       <motion.div
         style={{ background: theme.colors.green.primary }}
+        className="transition slide-in"
+        initial={{ scaleX: 0 }}
+        animate={{ scaleX: 0 }}
+        exit={{ scaleX: 1 }}
+        transition={{ delay: 0.25, duration: 0.5, ease: 'easeInOut' }}
+      ></motion.div>
+
+      <motion.div
+        style={{ background: 'HotPink' }}
         className="transition slide-out"
         initial={{ scaleX: 1 }}
         animate={{ scaleX: 0 }}
         exit={{ scaleX: 0 }}
         transition={{ delay: 0.25, duration: 0.5, ease: 'easeInOut' }}
+      ></motion.div>
+      <motion.div
+        style={{ background: theme.colors.green.primary }}
+        className="transition slide-out"
+        initial={{ scaleX: 1 }}
+        animate={{ scaleX: 0 }}
+        exit={{ scaleX: 0 }}
+        transition={{ duration: 0.5, ease: 'easeInOut' }}
       ></motion.div>
 
       <motion.div
