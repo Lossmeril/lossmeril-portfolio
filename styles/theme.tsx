@@ -65,6 +65,9 @@ const theme = extendTheme({
             width: '85px',
             borderBottom: '7px solid'
           }
+        },
+        'card-title': {
+          fontSize: '1.75em'
         }
       }
     }

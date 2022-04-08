@@ -9,10 +9,12 @@ const menuCards = [
 
 const Card = ({ title, href }) => {
   return (
-    <Link href={href} passHref>
+    <Link href={href}>
       <AspectRatio ratio={7 / 12} w="100%" h="100%">
-        <Box w="100%" h="100%" border="1px white solid" borderRadius="10px">
-          <Heading as="h2">{title}</Heading>
+        <Box className="menu-card">
+          <Heading as="h2" variant="card-title" alignSelf="left">
+            {title}
+          </Heading>
         </Box>
       </AspectRatio>
     </Link>
@@ -21,10 +23,10 @@ const Card = ({ title, href }) => {
 
 const MenuCards = () => {
   return (
-    <Wrap spacing={5} align="center" my={5}>
+    <Wrap spacing={5} align="left" my={5}>
       {menuCards.map(card => (
-        <WrapItem w={{ base: '80%', md: '25%' }}>
-          <Card title={card.title} href={card.href} key={card.title} />
+        <WrapItem w={{ base: '80%', md: '25%' }} key={card.title}>
+          <Card title={card.title} href={card.href} />
         </WrapItem>
       ))}
     </Wrap>

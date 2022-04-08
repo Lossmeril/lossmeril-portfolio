@@ -8,7 +8,7 @@ const Home: React.FC = () => {
   return (
     <ContentTransition>
       <Container maxW="container.lg">
-        <Box width="100%">
+        <Box w="100%">
           <Heading as="h1" variant="site-title">
             What do I do?
           </Heading>
