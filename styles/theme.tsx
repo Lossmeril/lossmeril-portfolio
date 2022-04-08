@@ -27,7 +27,8 @@ const theme = extendTheme({
     global: {
       body: {
         bg: 'mono.darkGray',
-        bgGradient: 'linear(to-br, mono.darkGray, mono.black)'
+        bgGradient: 'linear(to-br, mono.darkGray, mono.black)',
+        height: '100vh'
       }
     }
   },

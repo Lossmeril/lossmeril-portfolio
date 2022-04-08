@@ -4,6 +4,10 @@ import Layout from '../layouts/main'
 import theme from '../styles/theme'
 import { AnimatePresence } from 'framer-motion'
 
+if (typeof window !== 'undefined') {
+  window.history.scrollRestoration = 'manual'
+}
+
 const Portfolio = ({ Component, pageProps, router }) => {
   return (
     <ChakraProvider theme={theme}>

@@ -1,12 +1,12 @@
 import React from 'react'
 import { Container, Box, Heading, Text } from '@chakra-ui/react'
-import PageTransition from '../components/utility/transition-handler'
+import ContentTransition from '../components/utility/content-transition-handler'
 
 import withTransition from '../components/HOC/withTransition'
 
 const Home: React.FC = () => {
   return (
-    <PageTransition>
+    <ContentTransition>
       <Container maxW="container.lg">
         <Box width="100%">
           <Heading as="h1" variant="site-title">
@@ -15,7 +15,7 @@ const Home: React.FC = () => {
           <Text>Lorem Ipsum dolor sit Amet</Text>
         </Box>
       </Container>
-    </PageTransition>
+    </ContentTransition>
   )
 }
 
