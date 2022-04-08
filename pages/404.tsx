@@ -1,6 +1,6 @@
 import { Container, Box, Heading, Text } from '@chakra-ui/react'
+import ErrorMessage from '../components/404/error-messages'
 import withTransition from '../components/HOC/withTransition'
-import Cards from '../components/index/cards'
 import ContentTransition from '../components/utility/content-transition-handler'
 
 const NotFound = () => {
@@ -11,8 +11,7 @@ const NotFound = () => {
           <Heading as="h1" variant="site-title">
             404
           </Heading>
-          <Text>All you had to do was to follow the damn train, CJ!</Text>
-          <Cards />
+          <ErrorMessage />
         </Box>
       </Container>
     </ContentTransition>
