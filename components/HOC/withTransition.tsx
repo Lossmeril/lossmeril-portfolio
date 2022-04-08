@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import theme from '../../styles/theme'
 import Image from 'next/image'
-import { AspectRatio, Center } from '@chakra-ui/react'
+import { AspectRatio, Box, Center } from '@chakra-ui/react'
 
 const withTransition = OriginalComponent => {
   return () => (
@@ -24,23 +24,58 @@ const withTransition = OriginalComponent => {
         transition={{ delay: 0.25, duration: 0.5, ease: 'easeInOut' }}
       ></motion.div>
 
-      <Center width="100%" height="100%">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0 }}
-          exit={{ opacity: 1 }}
-          transition={{ delay: 0.25, duration: 0.5 }}
-        >
-          <AspectRatio maxWidth={{ base: '80vw', md: '800px' }} ratio={20 / 13}>
+      <motion.div
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          pointerEvents: 'none',
+          width: '100vw',
+          height: '100vh'
+        }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0 }}
+        exit={{ opacity: 1 }}
+        transition={{ delay: 0.25, duration: 0.5 }}
+      >
+        <Center width="100vw" height="100vh">
+          <Box maxW={{ base: '80vw', md: '700px' }}>
             <Image
               src="/img/logo_white.png"
-              height="100%"
-              width="100%"
-              objectFit="cover"
+              height="1000px"
+              width="1000px"
+              objectFit="contain"
+              className="transition-logo"
             />
-          </AspectRatio>
-        </motion.div>
-      </Center>
+          </Box>
+        </Center>
+      </motion.div>
+      <motion.div
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          pointerEvents: 'none',
+          width: '100vw',
+          height: '100vh'
+        }}
+        initial={{ opacity: 1 }}
+        animate={{ opacity: 0 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <Center width="100vw" height="100vh">
+          <Box maxW={{ base: '80vw', md: '700px' }}>
+            <Image
+              src="/img/logo_white.png"
+              height="1000px"
+              width="1000px"
+              objectFit="contain"
+              className="transition-logo"
+            />
+          </Box>
+        </Center>
+      </motion.div>
     </>
   )
 }

@@ -7,8 +7,8 @@ import withTransition from '../components/HOC/withTransition'
 const Home: React.FC = () => {
   return (
     <PageTransition>
-      <Container bg="" maxW="container.lg">
-        <Box height="100vh" width="100%">
+      <Container maxW="container.lg">
+        <Box width="100%">
           <Heading as="h1" variant="site-title">
             What do I do?
           </Heading>
