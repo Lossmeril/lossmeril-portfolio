@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { Box, Container } from '@chakra-ui/react'
+import Navbar from '../components/navbar'
 
 const Main = ({ children, router }) => {
   return (
@@ -10,6 +11,8 @@ const Main = ({ children, router }) => {
         <meta name="author" content="Michal Špitálský" />
         <meta name="author" content="Lossmeril" />
       </Head>
+
+      <Navbar />
 
       <Container maxW="container.xl">{children}</Container>
     </Box>

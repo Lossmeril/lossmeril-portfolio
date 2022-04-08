@@ -33,11 +33,18 @@ const theme = extendTheme({
   },
 
   components: {
+    Text: {
+      baseStyle: {
+        fontSize: '11.5pt',
+        paddingBottom: '8pt'
+      }
+    },
     Heading: {
       baseStyle: {
         textTransform: 'lowercase',
         position: 'relative',
         paddingBottom: '8pt',
+        marginBottom: '14pt',
 
         '&::after': {
           content: '""',

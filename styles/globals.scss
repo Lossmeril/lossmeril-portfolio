@@ -4,3 +4,28 @@
   font-family: 'Konnect Extra Bold';
   src: url(/fonts/KonnectExtraBold.otf);
 }
+
+.transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+
+  &.slide-in {
+    transform-origin: left;
+  }
+
+  &.slide-out {
+    transform-origin: right;
+  }
+}
+
+.transition-logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: '100px';
+  height: '200px';
+}
