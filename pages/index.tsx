@@ -3,6 +3,7 @@ import { Container, Box, Heading, Text } from '@chakra-ui/react'
 import ContentTransition from '../components/utility/content-transition-handler'
 
 import withTransition from '../components/HOC/withTransition'
+import Cards from '../components/index/cards'
 
 const Home: React.FC = () => {
   return (
@@ -23,6 +24,7 @@ const Home: React.FC = () => {
             creativity and sense of humour. I am also working on my feature
             documentary "Garden of Eden".
           </Text>
+          <Cards />
         </Box>
       </Container>
     </ContentTransition>
