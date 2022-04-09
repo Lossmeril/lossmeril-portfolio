@@ -1,11 +1,7 @@
 import React from 'react'
 import { AspectRatio, Box, Heading, Wrap, WrapItem } from '@chakra-ui/react'
 import Link from 'next/link'
-
-const menuCards = [
-  { title: 'Filmography', href: '/filmography' },
-  { title: 'About', href: '/about' }
-]
+import { Pages } from '../datasets/pages'
 
 const Card = ({ title, href }) => {
   return (
@@ -24,7 +20,7 @@ const Card = ({ title, href }) => {
 const MenuCards = () => {
   return (
     <Wrap spacing={5} align="left" my={5}>
-      {menuCards.map(card => (
+      {Pages.pages.map(card => (
         <WrapItem w={{ base: '80%', md: '25%' }} key={card.title}>
           <Card title={card.title} href={card.href} />
         </WrapItem>

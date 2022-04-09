@@ -2,6 +2,11 @@ import Head from 'next/head'
 import { Box, Container } from '@chakra-ui/react'
 import Navbar from '../components/navbar'
 
+const pages = [
+  { title: 'Filmography', href: '/filmography' },
+  { title: 'About', href: '/about' }
+]
+
 const Main = ({ children, router }) => {
   return (
     <Box as="main">
