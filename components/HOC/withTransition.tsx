@@ -6,7 +6,10 @@ import { AspectRatio, Box, Center } from '@chakra-ui/react'
 const withTransition = OriginalComponent => {
   return () => (
     <>
+      {/* THE PAGE */}
       <OriginalComponent />
+
+      {/* IN BARS */}
       <motion.div
         style={{ background: 'HotPink' }}
         className="transition slide-in"
@@ -24,6 +27,7 @@ const withTransition = OriginalComponent => {
         transition={{ delay: 0.25, duration: 0.5, ease: 'easeInOut' }}
       ></motion.div>
 
+      {/* OUT BARS */}
       <motion.div
         style={{ background: 'HotPink' }}
         className="transition slide-out"
@@ -41,6 +45,7 @@ const withTransition = OriginalComponent => {
         transition={{ duration: 0.5, ease: 'easeInOut' }}
       ></motion.div>
 
+      {/* LOGOS */}
       <motion.div
         style={{
           position: 'fixed',
@@ -56,7 +61,7 @@ const withTransition = OriginalComponent => {
         transition={{ delay: 0.25, duration: 0.5 }}
       >
         <Center width="100vw" height="100vh">
-          <Box maxW={{ base: '80vw', md: '700px' }}>
+          <Box maxW={{ base: '80vw', md: '500px' }}>
             <Image
               src="/img/logo_white.png"
               height="1000px"
@@ -82,7 +87,7 @@ const withTransition = OriginalComponent => {
         transition={{ duration: 0.5 }}
       >
         <Center width="100vw" height="100vh">
-          <Box maxW={{ base: '80vw', md: '700px' }}>
+          <Box maxW={{ base: '80vw', md: '500px' }}>
             <Image
               src="/img/logo_white.png"
               height="1000px"
