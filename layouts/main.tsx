@@ -2,11 +2,6 @@ import Head from 'next/head'
 import { Box, Container } from '@chakra-ui/react'
 import Navbar from '../components/navbar'
 
-const pages = [
-  { title: 'Filmography', href: '/filmography' },
-  { title: 'About', href: '/about' }
-]
-
 const Main = ({ children, router }) => {
   return (
     <Box as="main">
@@ -17,9 +12,13 @@ const Main = ({ children, router }) => {
         <meta name="author" content="Lossmeril" />
       </Head>
 
-      <Navbar />
+      <Box minH="100vh">
+        <Navbar path={router.asPath} />
 
-      <Container maxW="container.xl">{children}</Container>
+        <Container maxW="container.xl" mt={14}>
+          {children}
+        </Container>
+      </Box>
     </Box>
   )
 }

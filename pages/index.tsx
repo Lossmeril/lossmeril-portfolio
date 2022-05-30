@@ -1,30 +1,31 @@
 import React from 'react'
-import { Container, Box, Heading, Text } from '@chakra-ui/react'
+import {
+  Container,
+  Box,
+  Heading,
+  Text,
+  SimpleGrid,
+  GridItem
+} from '@chakra-ui/react'
 import ContentTransition from '../components/utility/content-transition-handler'
 
 import withTransition from '../components/HOC/withTransition'
-import Cards from '../components/index/cards'
 
 const Home: React.FC = () => {
   return (
     <ContentTransition>
-      <Container maxW="container.lg">
+      <Container maxW="container.xl" overflowX="visible">
         <Box width="100%">
-          <Heading as="h1" variant="site-title">
-            Michal Špitálský
-          </Heading>
-          <Text>
-            I am a freelance designer, videographer and artist from Czechia who
-            likes not to take life too seriously. I love to tweak and design all
-            things digital or physical while exploring all the different fields
-            of IT.
-          </Text>
-          <Text>
-            In my free time, I seek hobbies where I can make use of my
-            creativity and sense of humour. I am also working on my feature
-            documentary "Garden of Eden".
-          </Text>
-          <Cards />
+          <SimpleGrid columns={2}>
+            <GridItem>
+              <Box>
+                <Heading as="h1" variant="site-title" pt={2}>
+                  Michal Špitálský
+                </Heading>
+              </Box>
+            </GridItem>
+            <GridItem>Hello</GridItem>
+          </SimpleGrid>
         </Box>
       </Container>
     </ContentTransition>

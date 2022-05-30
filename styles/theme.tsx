@@ -59,6 +59,14 @@ const theme = extendTheme({
       },
       variants: {
         'site-title': {
+          fontSize: '7em',
+          lineHeight: '0.9em',
+          '&::after': {
+            content: undefined,
+            width: 0
+          }
+        },
+        'page-title': {
           fontSize: '3em',
 
           '&::after': {

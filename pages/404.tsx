@@ -6,7 +6,7 @@ import ContentTransition from '../components/utility/content-transition-handler'
 const NotFound = () => {
   return (
     <ContentTransition>
-      <Container maxW="container.lg">
+      <Container maxW="container.xl">
         <Box width="100%">
           <Heading as="h1" variant="site-title">
             404

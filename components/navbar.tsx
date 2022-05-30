@@ -1,11 +1,8 @@
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { IoLogoGithub } from 'react-icons/io5'
 import {
-  useColorModeValue,
   Box,
   Container,
-  Flex,
-  Heading,
   Stack,
   Menu,
   MenuButton,
@@ -16,16 +13,20 @@ import {
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import { Pages } from './datasets/pages'
+import theme from '../styles/theme'
 
-const LinkItem = ({ href, path, target, children, ...props }) => {
+const NavbarItem = ({ href, path, target, children, ...props }) => {
   const active = path === href
-  const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
+
   return (
     <NextLink href={href} passHref scroll={false}>
       <Link
-        p={2}
-        bg={active ? 'grassTeal' : undefined}
-        color={active ? '#202023' : inactiveColor}
+        p={3}
+        fontSize={{ base: '12px', md: '20px' }}
+        style={{
+          textTransform: 'lowercase',
+          fontFamily: theme.fonts.heading
+        }}
         target={target}
         {...props}
       >
@@ -39,83 +40,44 @@ const Navbar = props => {
   const { path } = props
 
   return (
-    <Box
-      as="nav"
-      w="100%"
-      bg={useColorModeValue('#ffffff40', '#20202380')}
-      css={{ backdropFilter: 'blur(10px)' }}
-      zIndex={1}
-      {...props}
-    >
+    <Box as="nav" w="100%" zIndex={1} {...props}>
       <Container
         display="flex"
         p={2}
-        maxW="container.md"
+        maxW="container.xl"
         flexWrap="wrap"
         alignItems="center"
       >
-        <Flex align="center" mr={5}>
-          <Heading as="h1" size="lg" letterSpacing={'tighter'}>
-            <NextLink href="../">Michal</NextLink>
-          </Heading>
-        </Flex>
-
         <Stack
           direction={{ base: 'column', md: 'row' }}
           display={{ base: 'none', md: 'flex' }}
           width={{ base: 'full', md: 'auto' }}
-          alignItems="center"
+          alignItems="left"
           flexGrow={1}
-          mt={{ base: 4, md: 0 }}
+          my={4}
         >
           {Pages.pages.map(link => (
-            <LinkItem href={link.href} path={path} target={undefined}>
+            <NavbarItem
+              href={link.href}
+              path={path}
+              target={undefined}
+              key={link.href}
+            >
               {link.title}
-            </LinkItem>
+            </NavbarItem>
           ))}
-          <LinkItem
+          <NavbarItem
             target="_blank"
             href="https://github.com/craftzdog/craftzdog-homepage"
             path={path}
             display="inline-flex"
-            alignItems="center"
-            style={{ gap: 4 }}
+            alignItems="left"
             pl={2}
           >
-            <IoLogoGithub />
+            <IoLogoGithub style={{ marginRight: '0.5em' }} />
             Source
-          </LinkItem>
+          </NavbarItem>
         </Stack>
-
-        <Box flex={1} alignItems="right">
-          <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
-            <Menu isLazy id="navbar-menu">
-              <MenuButton
-                as={IconButton}
-                icon={<HamburgerIcon />}
-                variant="outline"
-                aria-label="Options"
-              />
-              <MenuList>
-                <NextLink href="/" passHref>
-                  <MenuItem as={Link}>About</MenuItem>
-                </NextLink>
-                <NextLink href="/works" passHref>
-                  <MenuItem as={Link}>Works</MenuItem>
-                </NextLink>
-                <NextLink href="/posts" passHref>
-                  <MenuItem as={Link}>Posts</MenuItem>
-                </NextLink>
-                <MenuItem
-                  as={Link}
-                  href="https://github.com/craftzdog/craftzdog-homepage"
-                >
-                  View Source
-                </MenuItem>
-              </MenuList>
-            </Menu>
-          </Box>
-        </Box>
       </Container>
     </Box>
   )
