@@ -19,7 +19,12 @@ const Home: React.FC = () => {
           <SimpleGrid columns={2}>
             <GridItem>
               <Box>
-                <Heading as="h1" variant="site-title" pt={2}>
+                <Heading
+                  as="h1"
+                  variant="site-title"
+                  pt={2}
+                  fontSize={{ base: '3em', md: '7em' }}
+                >
                   Michal Špitálský
                 </Heading>
               </Box>
