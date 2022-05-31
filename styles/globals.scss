@@ -1,5 +1,6 @@
 //UTILITY --FONTS
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap');
+@import './colors.module';
 
 @font-face {
   font-family: 'Konnect Extra Bold';
@@ -30,8 +31,35 @@
   pointer-events: none;
 }
 
+//NAVBAR
+.navbar-link {
+  text-transform: lowercase;
+  height: 50%;
+  padding: 0.25em 0.75em;
+
+  &:hover {
+    text-decoration: none !important;
+    color: $green;
+  }
+
+  &.active {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 30px;
+      margin-left: 0.75em;
+      border-bottom: 5px solid;
+      border-color: $green;
+      content: '';
+    }
+  }
+}
+
 //INDEX --MAIN MENU
 .menu-card {
-  border: 1px white solid;
+  border: 1px $white solid;
   border-radius: 10px;
 }

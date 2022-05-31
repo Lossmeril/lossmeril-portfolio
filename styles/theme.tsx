@@ -1,4 +1,5 @@
 import { extendTheme } from '@chakra-ui/react'
+import colors from '../styles/colors.module.scss'
 
 const theme = extendTheme({
   fonts: {
@@ -9,17 +10,17 @@ const theme = extendTheme({
   colors: {
     green: {
       //lossmeril green
-      primary: '#48bf84'
+      primary: colors.green
     },
     mono: {
       //lossmeril white
-      white: '#f4f4f4',
+      white: colors.white,
 
       //lossmeril gray
-      darkGray: '#1e1e1e',
+      darkGray: colors.darkGray,
 
       //lossmeril gray darker
-      black: '#120b0d'
+      black: colors.black
     }
   },
 
@@ -46,6 +47,7 @@ const theme = extendTheme({
         position: 'relative',
         paddingBottom: '8pt',
         marginBottom: '14pt',
+        color: 'green.white',
 
         '&::after': {
           content: '""',
@@ -59,7 +61,6 @@ const theme = extendTheme({
       },
       variants: {
         'site-title': {
-          fontSize: '7em',
           lineHeight: '0.9em',
           '&::after': {
             content: undefined,

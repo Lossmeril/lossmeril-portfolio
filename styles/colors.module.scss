@@ -1,0 +1,14 @@
+@use 'sass:map';
+
+//COLORS
+$green: #48bf84;
+$white: #f4f4f4;
+$darkGray: #1e1e1e;
+$black: #120b0d;
+
+:export {
+  green: $green;
+  black: $black;
+  darkGray: $darkGray;
+  white: $white;
+}
