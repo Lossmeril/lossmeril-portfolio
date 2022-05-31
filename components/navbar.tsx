@@ -21,12 +21,12 @@ const NavbarItem = ({ href, path, target, children, ...props }) => {
   return (
     <NextLink href={href} passHref scroll={false}>
       <Link
-        p={3}
-        fontSize={{ base: '12px', md: '20px' }}
+        className={active ? 'navbar-link active' : 'navbar-link'}
         style={{
-          textTransform: 'lowercase',
           fontFamily: theme.fonts.heading
         }}
+        color={theme.colors.mono.white}
+        fontSize={{ base: '12px', md: '20px' }}
         target={target}
         {...props}
       >
