@@ -17,8 +17,10 @@ const GetCurrentPage = path => {
 const Main = ({ children, router }) => {
   const currentPage = GetCurrentPage(router.asPath)
 
-  const bgColor = theme.colors[currentPage.color].main
-  const bgColorDarker = theme.colors[currentPage.color].darker
+  const bgColor = currentPage.scheme.bg
+  const bgColorDarker = currentPage.scheme.bgDarker
+
+  console.log(bgColor + bgColorDarker)
 
   return (
     <Box as="main">

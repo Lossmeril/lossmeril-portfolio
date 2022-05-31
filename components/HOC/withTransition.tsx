@@ -11,7 +11,7 @@ const withTransition = OriginalComponent => {
 
       {/* IN BARS */}
       <motion.div
-        style={{ background: 'HotPink' }}
+        style={{ background: theme.colors.pink }}
         className="transition slide-in"
         initial={{ scaleX: 0 }}
         animate={{ scaleX: 0 }}
@@ -19,7 +19,7 @@ const withTransition = OriginalComponent => {
         transition={{ duration: 0.5, ease: 'easeInOut' }}
       ></motion.div>
       <motion.div
-        style={{ background: theme.colors.green.main }}
+        style={{ background: theme.colors.green }}
         className="transition slide-in"
         initial={{ scaleX: 0 }}
         animate={{ scaleX: 0 }}
@@ -29,7 +29,7 @@ const withTransition = OriginalComponent => {
 
       {/* OUT BARS */}
       <motion.div
-        style={{ background: 'HotPink' }}
+        style={{ background: theme.colors.pink }}
         className="transition slide-out"
         initial={{ scaleX: 1 }}
         animate={{ scaleX: 0 }}
@@ -37,7 +37,7 @@ const withTransition = OriginalComponent => {
         transition={{ delay: 0.25, duration: 0.5, ease: 'easeInOut' }}
       ></motion.div>
       <motion.div
-        style={{ background: theme.colors.green.main }}
+        style={{ background: theme.colors.green }}
         className="transition slide-out"
         initial={{ scaleX: 1 }}
         animate={{ scaleX: 0 }}

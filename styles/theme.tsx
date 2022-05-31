@@ -8,33 +8,18 @@ const theme = extendTheme({
   },
 
   colors: {
-    green: {
-      //#48bf84
-      main: colors.green,
+    green: colors.green,
+    darkGreen: colors.darkGreen,
 
-      darker: colors.darkGreen
-    },
-    white: {
-      //#f4f4f4
-      main: colors.white
-    },
-    darkGray: {
-      //#1e1e1e
-      main: colors.darkGray,
+    white: colors.white,
 
-      //#120b0d
-      darker: colors.black
-    },
-    pink: {
-      main: colors.pink,
+    darkGray: colors.darkGray,
+    black: colors.black,
 
-      //#ff45a2
-      darker: colors.darkPink,
-
-      highlight: colors.darkestPink
-    }
+    pink: colors.pink,
+    darkPink: colors.darkPink,
+    darkestPink: colors.darkestPink
   },
-
   styles: {
     global: {
       body: {
@@ -56,7 +41,7 @@ const theme = extendTheme({
         position: 'relative',
         paddingBottom: '8pt',
         marginBottom: '14pt',
-        color: 'white.main',
+        color: 'white',
 
         '&::after': {
           content: '""',
@@ -65,7 +50,7 @@ const theme = extendTheme({
           left: '0',
           width: '50px',
           borderBottom: '5px solid',
-          borderColor: 'green.main'
+          borderColor: 'green'
         }
       },
       variants: {

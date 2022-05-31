@@ -1,25 +1,21 @@
+import { Schemes } from './schemes'
+
 export const Pages = {
   pages: [
     {
       title: 'Home',
       href: '/',
-      color: 'darkGray',
-      highlight: '',
-      hover: 'green'
+      scheme: Schemes.base
     },
     {
       title: 'Filmography',
       href: '/filmography',
-      color: '',
-      highlight: '',
-      hover: ''
+      scheme: ''
     },
     {
       title: 'About',
       href: '/about',
-      color: 'pink',
-      highlight: 'highlightPink',
-      hover: 'darkGray'
+      scheme: Schemes.pink
     }
   ]
 }
