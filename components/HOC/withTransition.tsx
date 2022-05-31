@@ -1,104 +1,36 @@
 import { motion } from 'framer-motion'
-import theme from '../../styles/theme'
-import Image from 'next/image'
-import { AspectRatio, Box, Center } from '@chakra-ui/react'
+import { Box, Container } from '@chakra-ui/react'
+import { Schemes } from '../datasets/schemes'
 
-const withTransition = OriginalComponent => {
+const withTransition = (OriginalComponent, scheme = Schemes.base) => {
   return () => (
-    <>
-      {/* THE PAGE */}
-      <OriginalComponent />
-
-      {/* IN BARS */}
-      <motion.div
-        style={{ background: theme.colors.pink }}
-        className="transition slide-in"
-        initial={{ scaleX: 0 }}
-        animate={{ scaleX: 0 }}
-        exit={{ scaleX: 1 }}
-        transition={{ duration: 0.5, ease: 'easeInOut' }}
-      ></motion.div>
-      <motion.div
-        style={{ background: theme.colors.green }}
-        className="transition slide-in"
-        initial={{ scaleX: 0 }}
-        animate={{ scaleX: 0 }}
-        exit={{ scaleX: 1 }}
-        transition={{ delay: 0.25, duration: 0.5, ease: 'easeInOut' }}
-      ></motion.div>
-
-      {/* OUT BARS */}
-      <motion.div
-        style={{ background: theme.colors.pink }}
-        className="transition slide-out"
-        initial={{ scaleX: 1 }}
-        animate={{ scaleX: 0 }}
-        exit={{ scaleX: 0 }}
-        transition={{ delay: 0.25, duration: 0.5, ease: 'easeInOut' }}
-      ></motion.div>
-      <motion.div
-        style={{ background: theme.colors.green }}
-        className="transition slide-out"
-        initial={{ scaleX: 1 }}
-        animate={{ scaleX: 0 }}
-        exit={{ scaleX: 0 }}
-        transition={{ duration: 0.5, ease: 'easeInOut' }}
-      ></motion.div>
-
-      {/* LOGOS */}
-      <motion.div
+    <motion.div
+      initial={{ opacity: 0, x: -500 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: 500 }}
+      transition={{
+        duration: 1,
+        ease: [0.6, -0.05, 0.01, 0.99]
+      }}
+    >
+      <Box
+        minH="100vh"
         style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          pointerEvents: 'none',
-          width: '100vw',
-          height: '100vh'
+          backgroundColor: scheme.bg,
+          background:
+            'linear-gradient(90deg, ' +
+            scheme.bg +
+            ' 0%, ' +
+            scheme.bgDarker +
+            ' 100%)',
+          overflowX: 'hidden'
         }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0 }}
-        exit={{ opacity: 1 }}
-        transition={{ delay: 0.25, duration: 0.5 }}
       >
-        <Center width="100vw" height="100vh">
-          <Box maxW={{ base: '80vw', md: '500px' }}>
-            <Image
-              src="/img/logo_white.png"
-              height="1000px"
-              width="1000px"
-              objectFit="contain"
-              className="transition-logo"
-            />
-          </Box>
-        </Center>
-      </motion.div>
-      <motion.div
-        style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          pointerEvents: 'none',
-          width: '100vw',
-          height: '100vh'
-        }}
-        initial={{ opacity: 1 }}
-        animate={{ opacity: 0 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        <Center width="100vw" height="100vh">
-          <Box maxW={{ base: '80vw', md: '500px' }}>
-            <Image
-              src="/img/logo_white.png"
-              height="1000px"
-              width="1000px"
-              objectFit="contain"
-              className="transition-logo"
-            />
-          </Box>
-        </Center>
-      </motion.div>
-    </>
+        <Container maxW="container.xl" mt="20vh">
+          <OriginalComponent />
+        </Container>
+      </Box>
+    </motion.div>
   )
 }
 

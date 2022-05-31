@@ -2,7 +2,6 @@ import Head from 'next/head'
 import { Box, Container } from '@chakra-ui/react'
 import Navbar from '../components/navbar'
 import { Pages } from '../components/datasets/pages'
-import theme from '../styles/theme'
 
 const GetCurrentPage = path => {
   let thisPage
@@ -17,11 +16,6 @@ const GetCurrentPage = path => {
 const Main = ({ children, router }) => {
   const currentPage = GetCurrentPage(router.asPath)
 
-  const bgColor = currentPage.scheme.bg
-  const bgColorDarker = currentPage.scheme.bgDarker
-
-  console.log(bgColor + bgColorDarker)
-
   return (
     <Box as="main">
       <Head>
@@ -31,25 +25,10 @@ const Main = ({ children, router }) => {
         <meta name="author" content="Lossmeril" />
       </Head>
 
-      <Box
-        minH="100vh"
-        style={{
-          backgroundColor: bgColor,
-          background:
-            'linear-gradient(90deg, ' +
-            bgColor +
-            ' 0%, ' +
-            bgColorDarker +
-            ' 100%)',
-          transition: 'background 2s',
-          transitionDelay: '2000'
-        }}
-      >
+      <Box minH="100vh">
         <Navbar path={router.asPath} thisPage={currentPage} />
 
-        <Container maxW="container.xl" mt={14}>
-          {children}
-        </Container>
+        <Box style={{ overflowX: 'hidden' }}>{children}</Box>
       </Box>
     </Box>
   )
