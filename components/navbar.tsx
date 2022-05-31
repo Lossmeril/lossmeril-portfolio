@@ -22,21 +22,13 @@ const NavbarItem = ({ href, path, target, children, ...props }) => {
   return (
     <NextLink href={href} passHref scroll={false}>
       <Link
-        className={
-          active
-            ? 'navbar-link active highlight-' +
-              thisPage.highlight +
-              ' hover-' +
-              thisPage.hover
-            : 'navbar-link highlight-' +
-              thisPage.highlight +
-              ' hover-' +
-              thisPage.hover
-        }
+        className={active ? 'navbar-link active' : 'navbar-link'}
         style={{
           fontFamily: theme.fonts.heading
         }}
-        color={theme.colors.main}
+        color={theme.colors.white}
+        _hover={{ color: thisPage.scheme.hover }}
+        _after={{ borderColor: thisPage.scheme.highlight + ' !important' }}
         fontSize={{ base: '12px', md: '20px' }}
         target={target}
         {...props}

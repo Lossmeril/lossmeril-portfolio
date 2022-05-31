@@ -8,28 +8,28 @@
 }
 
 //GLOBAL --TRANSITION BARS
-.transition {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100%;
+// .transition {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   height: 100vh;
+//   width: 100%;
 
-  &.slide-in {
-    transform-origin: left;
-  }
+//   &.slide-in {
+//     transform-origin: left;
+//   }
 
-  &.slide-out {
-    transform-origin: right;
-  }
-}
+//   &.slide-out {
+//     transform-origin: right;
+//   }
+// }
 
-.transition-logo {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-}
+// .transition-logo {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   pointer-events: none;
+// }
 
 //NAVBAR
 .navbar-link {
@@ -39,22 +39,6 @@
 
   &:hover {
     text-decoration: none !important;
-
-    &.hover-green {
-      color: $green;
-    }
-
-    &.hover-pink {
-      color: $pink;
-    }
-
-    &.hover-darkGray {
-      color: $darkGray;
-    }
-
-    &.hover-white {
-      color: $white;
-    }
   }
 
   &.active {
@@ -67,7 +51,6 @@
       width: 30px;
       margin-left: 0.75em;
       border-bottom: 5px solid;
-      border-color: $green;
       content: '';
     }
   }

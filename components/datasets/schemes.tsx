@@ -12,7 +12,7 @@ export const Schemes = {
     bg: colors.pink,
     bgDarker: colors.darkPink,
 
-    highlight: colors.darkestPink,
-    hover: colors.darkestPink
+    highlight: colors.darkGray,
+    hover: colors.darkGray
   }
 }
