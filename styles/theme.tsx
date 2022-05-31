@@ -20,6 +20,7 @@ const theme = extendTheme({
     darkPink: colors.darkPink,
     darkestPink: colors.darkestPink
   },
+
   styles: {
     global: {
       body: {
