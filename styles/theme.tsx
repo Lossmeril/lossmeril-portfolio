@@ -9,26 +9,35 @@ const theme = extendTheme({
 
   colors: {
     green: {
-      //lossmeril green
-      primary: colors.green
+      //#48bf84
+      main: colors.green,
+
+      darker: colors.darkGreen
     },
-    mono: {
-      //lossmeril white
-      white: colors.white,
+    white: {
+      //#f4f4f4
+      main: colors.white
+    },
+    darkGray: {
+      //#1e1e1e
+      main: colors.darkGray,
 
-      //lossmeril gray
-      darkGray: colors.darkGray,
+      //#120b0d
+      darker: colors.black
+    },
+    pink: {
+      main: colors.pink,
 
-      //lossmeril gray darker
-      black: colors.black
+      //#ff45a2
+      darker: colors.darkPink,
+
+      highlight: colors.darkestPink
     }
   },
 
   styles: {
     global: {
       body: {
-        bg: 'mono.darkGray',
-        bgGradient: 'linear(to-br, mono.darkGray, mono.black)',
         height: '100vh'
       }
     }
@@ -47,7 +56,7 @@ const theme = extendTheme({
         position: 'relative',
         paddingBottom: '8pt',
         marginBottom: '14pt',
-        color: 'green.white',
+        color: 'white.main',
 
         '&::after': {
           content: '""',
@@ -56,7 +65,7 @@ const theme = extendTheme({
           left: '0',
           width: '50px',
           borderBottom: '5px solid',
-          borderColor: 'green.primary'
+          borderColor: 'green.main'
         }
       },
       variants: {

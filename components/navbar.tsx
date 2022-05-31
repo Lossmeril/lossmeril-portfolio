@@ -16,16 +16,27 @@ import { Pages } from './datasets/pages'
 import theme from '../styles/theme'
 
 const NavbarItem = ({ href, path, target, children, ...props }) => {
+  const { thisPage } = props
   const active = path === href
 
   return (
     <NextLink href={href} passHref scroll={false}>
       <Link
-        className={active ? 'navbar-link active' : 'navbar-link'}
+        className={
+          active
+            ? 'navbar-link active highlight-' +
+              thisPage.highlight +
+              ' hover-' +
+              thisPage.hover
+            : 'navbar-link highlight-' +
+              thisPage.highlight +
+              ' hover-' +
+              thisPage.hover
+        }
         style={{
           fontFamily: theme.fonts.heading
         }}
-        color={theme.colors.mono.white}
+        color={theme.colors.main}
         fontSize={{ base: '12px', md: '20px' }}
         target={target}
         {...props}
@@ -37,8 +48,7 @@ const NavbarItem = ({ href, path, target, children, ...props }) => {
 }
 
 const Navbar = props => {
-  const { path } = props
-
+  const { path, thisPage } = props
   return (
     <Box as="nav" w="100%" zIndex={1} {...props}>
       <Container
@@ -62,6 +72,7 @@ const Navbar = props => {
               path={path}
               target={undefined}
               key={link.href}
+              thisPage={thisPage}
             >
               {link.title}
             </NavbarItem>
@@ -73,6 +84,7 @@ const Navbar = props => {
             display="inline-flex"
             alignItems="left"
             pl={2}
+            thisPage={thisPage}
           >
             <IoLogoGithub style={{ marginRight: '0.5em' }} />
             Source

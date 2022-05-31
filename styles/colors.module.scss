@@ -2,13 +2,24 @@
 
 //COLORS
 $green: #48bf84;
+$darkGreen: #399f6c;
+
 $white: #f4f4f4;
+
+$pink: hotpink;
+$darkPink: #ff45a2;
+$darkestPink: #a30353;
+
 $darkGray: #1e1e1e;
 $black: #120b0d;
 
 :export {
   green: $green;
+  darkGreen: $darkGreen;
+  white: $white;
+  pink: $pink;
+  darkPink: $darkPink;
+  darkestPink: $darkestPink;
   black: $black;
   darkGray: $darkGray;
-  white: $white;
 }
