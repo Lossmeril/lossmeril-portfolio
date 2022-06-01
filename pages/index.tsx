@@ -5,7 +5,6 @@ import { Schemes } from '../components/datasets/schemes'
 import PageTitleSection from '../components/page-title-section'
 import PageTitle from '../components/elements/page-title'
 import Section from '../components/elements/section'
-import { motion, useViewportScroll } from 'framer-motion'
 
 const PageScheme = Schemes.base
 
