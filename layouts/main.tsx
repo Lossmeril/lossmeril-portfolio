@@ -25,7 +25,13 @@ const Main = ({ children, router }) => {
         <meta name="author" content="Lossmeril" />
       </Head>
 
-      <Box minH="100vh">
+      <Box
+        position="fixed"
+        height="100vh"
+        width="100vw"
+        overflowX="hidden"
+        className="pageContainer"
+      >
         <Navbar path={router.asPath} thispage={currentPage} />
 
         <Box style={{ overflow: 'hidden' }}>{children}</Box>

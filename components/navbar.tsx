@@ -42,7 +42,15 @@ const NavbarItem = ({ href, path, target, children, ...props }) => {
 const Navbar = props => {
   const { path, thispage } = props
   return (
-    <Box as="nav" w="100%" zIndex={3} {...props} position="absolute" top={3}>
+    <Box
+      as="nav"
+      w="100%"
+      zIndex={2}
+      {...props}
+      position="absolute"
+      scrollBehavior="smooth"
+      top={3}
+    >
       <Container
         display="flex"
         p={2}
