@@ -24,7 +24,9 @@ const theme = extendTheme({
   styles: {
     global: {
       body: {
-        height: '100vh'
+        height: '100vh',
+        bg: 'green',
+        bgGradient: 'to-br green darkGreen'
       }
     }
   },
