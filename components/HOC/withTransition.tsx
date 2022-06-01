@@ -4,7 +4,7 @@ import { Schemes } from '../datasets/schemes'
 
 const withTransition = (OriginalComponent, scheme = Schemes.base) => {
   return () => (
-    <Box position="fixed" height="100vh" width="100vw" overflowX="hidden">
+    <>
       <motion.div
         initial={{ zIndex: 2, x: '-100%' }}
         animate={{ zIndex: 1, x: 0 }}
@@ -44,7 +44,7 @@ const withTransition = (OriginalComponent, scheme = Schemes.base) => {
           </Container>
         </Box>
       </motion.div>
-    </Box>
+    </>
   )
 }
 
