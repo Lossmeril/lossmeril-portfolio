@@ -7,27 +7,6 @@
   src: url(/fonts/KonnectExtraBold.otf);
 }
 
-//GLOBAL --TRANSITION BARS
-.transition {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100%;
-  &.slide-in {
-    transform-origin: left;
-  }
-  &.slide-out {
-    transform-origin: right;
-  }
-}
-.transition-logo {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-}
-
 //NAVBAR
 .navbar-link {
   text-transform: lowercase;

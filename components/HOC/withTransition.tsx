@@ -11,7 +11,7 @@ const withTransition = (OriginalComponent, scheme = Schemes.base) => {
         exit={{ zIndex: 1, x: '100%' }}
         transition={{
           duration: 1,
-          ease: [0.6, -0.05, 0.01, 0.99]
+          type: 'spring'
         }}
         style={{ width: '100vw', position: 'absolute' }}
       >
@@ -30,12 +30,12 @@ const withTransition = (OriginalComponent, scheme = Schemes.base) => {
         >
           <Container maxW="container.xl" mt="20vh">
             <motion.div
-              initial={{ opacity: 0, x: -500 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 500 }}
+              initial={{ opacity: 0, skewX: '-60deg' }}
+              animate={{ opacity: 1, skewX: 0 }}
+              exit={{ opacity: 0, skewX: '-60deg' }}
               transition={{
                 duration: 1,
-                ease: [0.6, -0.05, 0.01, 0.99]
+                type: 'spring'
               }}
               style={{}}
             >
@@ -44,22 +44,6 @@ const withTransition = (OriginalComponent, scheme = Schemes.base) => {
           </Container>
         </Box>
       </motion.div>
-      {/* <motion.div
-        style={{ background: colors.white, rotate: '45deg' }}
-        className="transition slide-in"
-        initial={{ scaleX: 0, opacity: 0 }}
-        animate={{ scaleX: 0, opacity: 0 }}
-        exit={{ scaleX: 1, opacity: 1 }}
-        transition={{ duration: 0.25, ease: 'easeInOut' }}
-      ></motion.div>
-      <motion.div
-        style={{ background: colors.white, rotate: '45deg' }}
-        className="transition slide-out"
-        initial={{ scaleX: 1, opacity: 1 }}
-        animate={{ scaleX: 0, opacity: 0 }}
-        exit={{ scaleX: 0, opacity: 0 }}
-        transition={{ duration: 0.25, ease: 'easeInOut' }}
-      ></motion.div> */}
     </Box>
   )
 }
