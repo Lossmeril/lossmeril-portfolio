@@ -26,7 +26,8 @@ const theme = extendTheme({
       body: {
         height: '100vh',
         bg: 'green',
-        bgGradient: 'to-br green darkGreen'
+        bgGradient:
+          'linear(to-br, ' + colors.green + ', ' + colors.darkGreen + ')'
       }
     }
   },

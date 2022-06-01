@@ -9,7 +9,7 @@ const PageTitle = ({ children }) => {
         className="page-title"
         variant="site-title"
         pt={2}
-        fontSize={{ base: '3em', md: '9em' }}
+        fontSize={{ base: '10vw' }}
         width="80%"
       >
         {children}
@@ -19,7 +19,7 @@ const PageTitle = ({ children }) => {
         className="page-title shadow"
         variant="site-title"
         pt={2}
-        fontSize={{ base: '3em', md: '9em' }}
+        fontSize={{ base: '10vw' }}
         width="80%"
       >
         {children}

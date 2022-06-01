@@ -28,7 +28,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, 0%);
+  transform: translate(-50%, 10%);
 
   text-align: center;
   z-index: 5;
@@ -36,11 +36,12 @@
   &.shadow {
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 30%);
+    transform: translate(-50%, 40%);
     z-index: 3;
 
+    opacity: 0.75;
     color: transparent;
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: $white;
   }
 }
@@ -51,7 +52,7 @@
   &.smoke {
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -30%) scale(1.5);
+    transform: translate(-50%, -30%) scale(1.2);
   }
 
   &.character {
