@@ -29,21 +29,19 @@ const withTransition = (OriginalComponent, scheme = Schemes.base) => {
             overflowX: 'hidden'
           }}
         >
-          <Container maxW="container.xl" mt="20vh">
-            <motion.div
-              initial={{ opacity: 0, skewX: '-60deg' }}
-              animate={{ opacity: 1, skewX: 0 }}
-              exit={{ opacity: 0, skewX: '-60deg' }}
-              transition={{
-                duration: 1,
-                type: 'spring',
-                stiffness: 50
-              }}
-              style={{}}
-            >
-              <OriginalComponent />
-            </motion.div>
-          </Container>
+          <motion.div
+            initial={{ opacity: 0, skewX: '-60deg' }}
+            animate={{ opacity: 1, skewX: 0 }}
+            exit={{ opacity: 0, skewX: '-60deg' }}
+            transition={{
+              duration: 1,
+              type: 'spring',
+              stiffness: 50
+            }}
+            style={{}}
+          >
+            <OriginalComponent />
+          </motion.div>
         </Box>
       </motion.div>
     </>

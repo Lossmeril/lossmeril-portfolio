@@ -10,6 +10,7 @@ import {
 import withTransition from '../components/HOC/withTransition'
 import { Schemes } from '../components/datasets/schemes'
 import PageTitleSection from '../components/page-title-section'
+import PageTitle from '../components/elements/page-title'
 
 const PageScheme = Schemes.base
 
@@ -17,27 +18,11 @@ const Home: React.FC = () => {
   return (
     <>
       <PageTitleSection>
-        <Container maxW="container.xl">
-          <Box width="100%">
-            <SimpleGrid columns={2}>
-              <GridItem>
-                <Box>
-                  <Heading
-                    as="h1"
-                    variant="site-title"
-                    pt={2}
-                    fontSize={{ base: '3em', md: '7em' }}
-                  >
-                    Michal Špitálský
-                  </Heading>
-                </Box>
-              </GridItem>
-              <GridItem>Hello</GridItem>
-            </SimpleGrid>
-          </Box>
-        </Container>
+        <PageTitle>Michal Špitálský</PageTitle>
+        <img src="/img/index/smoke.png" className="title-img smoke" />
+        <img src="/img/index/character.png" className="title-img character" />
       </PageTitleSection>
-      <Box>
+      <Container maxW="container.xl" mt={10} pt={3}>
         <Heading>The Great Gatsby</Heading>
         <Text>
           In my younger and more vulnerable years my father gave me some advice
@@ -90,7 +75,7 @@ const Home: React.FC = () => {
           floated in the wake of his dreams that temporarily closed out my
           interest in the abortive sorrows and short-winded elations of men.
         </Text>
-      </Box>
+      </Container>
     </>
   )
 }
