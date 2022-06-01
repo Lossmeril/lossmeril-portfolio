@@ -11,7 +11,8 @@ const withTransition = (OriginalComponent, scheme = Schemes.base) => {
         exit={{ zIndex: 1, x: '100%' }}
         transition={{
           duration: 1,
-          type: 'spring'
+          type: 'spring',
+          stiffness: 50
         }}
         style={{ width: '100vw', position: 'absolute' }}
       >
@@ -35,7 +36,8 @@ const withTransition = (OriginalComponent, scheme = Schemes.base) => {
               exit={{ opacity: 0, skewX: '-60deg' }}
               transition={{
                 duration: 1,
-                type: 'spring'
+                type: 'spring',
+                stiffness: 50
               }}
               style={{}}
             >
