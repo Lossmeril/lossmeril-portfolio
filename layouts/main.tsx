@@ -4,13 +4,13 @@ import Navbar from '../components/navbar'
 import { Pages } from '../components/datasets/pages'
 
 const GetCurrentPage = path => {
-  let thisPage
+  let thispage
   Pages.pages.map(page => {
     if (page.href === path) {
-      thisPage = page
+      thispage = page
     }
   })
-  return thisPage !== undefined ? thisPage : Pages.pages[0]
+  return thispage !== undefined ? thispage : Pages.pages[0]
 }
 
 const Main = ({ children, router }) => {
@@ -26,9 +26,9 @@ const Main = ({ children, router }) => {
       </Head>
 
       <Box minH="100vh">
-        <Navbar path={router.asPath} thisPage={currentPage} />
+        <Navbar path={router.asPath} thispage={currentPage} />
 
-        <Box style={{ overflowX: 'hidden' }}>{children}</Box>
+        <Box style={{ overflow: 'hidden' }}>{children}</Box>
       </Box>
     </Box>
   )

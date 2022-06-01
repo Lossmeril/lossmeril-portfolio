@@ -16,7 +16,7 @@ import { Pages } from './datasets/pages'
 import theme from '../styles/theme'
 
 const NavbarItem = ({ href, path, target, children, ...props }) => {
-  const { thisPage } = props
+  const { thispage } = props
   const active = path === href
 
   return (
@@ -27,8 +27,8 @@ const NavbarItem = ({ href, path, target, children, ...props }) => {
           fontFamily: theme.fonts.heading
         }}
         color={theme.colors.white}
-        _hover={{ color: thisPage.scheme.hover }}
-        _after={{ borderColor: thisPage.scheme.highlight + ' !important' }}
+        _hover={{ color: thispage.scheme.hover }}
+        _after={{ borderColor: thispage.scheme.highlight + ' !important' }}
         fontSize={{ base: '12px', md: '20px' }}
         target={target}
         {...props}
@@ -40,9 +40,9 @@ const NavbarItem = ({ href, path, target, children, ...props }) => {
 }
 
 const Navbar = props => {
-  const { path, thisPage } = props
+  const { path, thispage } = props
   return (
-    <Box as="nav" w="100%" zIndex={1} {...props} position="absolute" top={3}>
+    <Box as="nav" w="100%" zIndex={3} {...props} position="absolute" top={3}>
       <Container
         display="flex"
         p={2}
@@ -64,7 +64,7 @@ const Navbar = props => {
               path={path}
               target={undefined}
               key={link.href}
-              thisPage={thisPage}
+              thispage={thispage}
             >
               {link.title}
             </NavbarItem>
@@ -76,7 +76,7 @@ const Navbar = props => {
             display="inline-flex"
             alignItems="left"
             pl={2}
-            thisPage={thisPage}
+            thispage={thispage}
           >
             <IoLogoGithub style={{ marginRight: '0.5em' }} />
             Source

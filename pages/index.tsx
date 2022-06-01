@@ -1,14 +1,9 @@
 import React from 'react'
-import {
-  Container,
-  Box,
-  Heading,
-  Text,
-  SimpleGrid,
-  GridItem
-} from '@chakra-ui/react'
+import { Container, Box, Heading, SimpleGrid, GridItem } from '@chakra-ui/react'
 import withTransition from '../components/HOC/withTransition'
 import { Schemes } from '../components/datasets/schemes'
+
+const PageScheme = Schemes.base
 
 const Home: React.FC = () => {
   return (
@@ -34,4 +29,4 @@ const Home: React.FC = () => {
   )
 }
 
-export default withTransition(Home, Schemes.base)
+export default withTransition(Home, PageScheme)
