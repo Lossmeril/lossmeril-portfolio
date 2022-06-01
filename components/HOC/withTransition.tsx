@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
-import { Box, Container } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 import { Schemes } from '../datasets/schemes'
+import React from 'react'
 
 const withTransition = (OriginalComponent, scheme = Schemes.base) => {
   return () => (
@@ -10,7 +11,7 @@ const withTransition = (OriginalComponent, scheme = Schemes.base) => {
         animate={{ zIndex: 1, x: 0 }}
         exit={{ zIndex: 1, x: '100%' }}
         transition={{
-          duration: 1,
+          duration: 3,
           type: 'spring',
           stiffness: 50
         }}
@@ -21,7 +22,7 @@ const withTransition = (OriginalComponent, scheme = Schemes.base) => {
           style={{
             backgroundColor: scheme.bg,
             background:
-              'linear-gradient(135deg, ' +
+              'linear-gradient(90deg, ' +
               scheme.bg +
               ' 0%, ' +
               scheme.bgDarker +
@@ -34,7 +35,7 @@ const withTransition = (OriginalComponent, scheme = Schemes.base) => {
             animate={{ opacity: 1, skewX: 0 }}
             exit={{ opacity: 0, skewX: '-60deg' }}
             transition={{
-              duration: 1,
+              duration: 3,
               type: 'spring',
               stiffness: 50
             }}

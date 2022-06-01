@@ -14,5 +14,12 @@ export const Schemes = {
 
     highlight: colors.darkGray,
     hover: colors.darkGray
+  },
+  green: {
+    bg: colors.green,
+    bgDarker: colors.darkGreen,
+
+    highlight: colors.darkGray,
+    hover: colors.darkGray
   }
 }

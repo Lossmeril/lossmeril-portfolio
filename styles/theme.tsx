@@ -42,36 +42,24 @@ const theme = extendTheme({
     Heading: {
       baseStyle: {
         textTransform: 'lowercase',
-        paddingBottom: '8pt',
+        paddingBottom: '14pt',
         marginBottom: '14pt',
         color: 'white'
+      },
+      variants: {
+        'section-title': {
+          position: 'relative',
 
-        //   '&::after': {
-        //     content: '""',
-        //     position: 'absolute',
-        //     bottom: '0',
-        //     left: '0',
-        //     width: '50px',
-        //     borderBottom: '5px solid',
-        //     borderColor: 'green'
-        //   }
-        // },
-        // variants: {
-        //   'site-title': {
-        //     lineHeight: '0.9em',
-        //     '&::after': {
-        //       content: undefined,
-        //       width: 0
-        //     }
-        //   },
-        //   'page-title': {
-        //     fontSize: '3em',
-
-        //     '&::after': {
-        //       width: '85px',
-        //       borderBottom: '7px solid'
-        //     }
-        //   },
+          '&::after': {
+            content: '""',
+            position: 'absolute',
+            bottom: '0',
+            left: '50%',
+            width: '100px',
+            borderBottom: '10px solid',
+            transform: 'translate(-50px)'
+          }
+        }
         //   'card-title': {
         //     fontSize: '1.75em'
         //   }
