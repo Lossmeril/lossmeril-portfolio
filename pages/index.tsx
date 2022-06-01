@@ -9,31 +9,34 @@ import {
 } from '@chakra-ui/react'
 import withTransition from '../components/HOC/withTransition'
 import { Schemes } from '../components/datasets/schemes'
+import PageTitleSection from '../components/page-title-section'
 
 const PageScheme = Schemes.base
 
 const Home: React.FC = () => {
   return (
     <>
-      <Container maxW="container.xl">
-        <Box width="100%">
-          <SimpleGrid columns={2}>
-            <GridItem>
-              <Box>
-                <Heading
-                  as="h1"
-                  variant="site-title"
-                  pt={2}
-                  fontSize={{ base: '3em', md: '7em' }}
-                >
-                  Michal Špitálský
-                </Heading>
-              </Box>
-            </GridItem>
-            <GridItem>Hello</GridItem>
-          </SimpleGrid>
-        </Box>
-      </Container>
+      <PageTitleSection>
+        <Container maxW="container.xl">
+          <Box width="100%">
+            <SimpleGrid columns={2}>
+              <GridItem>
+                <Box>
+                  <Heading
+                    as="h1"
+                    variant="site-title"
+                    pt={2}
+                    fontSize={{ base: '3em', md: '7em' }}
+                  >
+                    Michal Špitálský
+                  </Heading>
+                </Box>
+              </GridItem>
+              <GridItem>Hello</GridItem>
+            </SimpleGrid>
+          </Box>
+        </Container>
+      </PageTitleSection>
       <Box>
         <Heading>The Great Gatsby</Heading>
         <Text>
