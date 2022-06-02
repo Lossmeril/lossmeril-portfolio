@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { Box } from '@chakra-ui/react'
 import Navbar from '../components/navbar'
 import { Pages } from '../components/datasets/pages'
+import PageBGs from '../components/page-bgs/page-bgs'
 
 const GetCurrentPage = path => {
   let thispage
@@ -25,6 +26,7 @@ const Main = ({ children, router }) => {
         <meta name="author" content="Lossmeril" />
       </Head>
 
+      <PageBGs />
       <Box>
         <Navbar path={router.asPath} thispage={currentPage} />
 

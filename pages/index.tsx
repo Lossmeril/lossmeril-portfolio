@@ -13,8 +13,6 @@ const Home: React.FC = () => {
     <>
       <PageTitleSection>
         <PageTitle>Michal Špitálský</PageTitle>
-        <img src="/img/index/smoke.png" className="title-img smoke" />
-        <img src="/img/index/character.png" className="title-img character" />
       </PageTitleSection>
       <Section>
         <Container maxW="container.xl" mt={10} pt={3}>
