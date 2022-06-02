@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { Box, Container } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 import Navbar from '../components/navbar'
 import { Pages } from '../components/datasets/pages'
 
@@ -25,16 +25,10 @@ const Main = ({ children, router }) => {
         <meta name="author" content="Lossmeril" />
       </Head>
 
-      <Box
-        position="fixed"
-        height="100vh"
-        width="100vw"
-        overflowX="hidden"
-        className="pageContainer"
-      >
+      <Box>
         <Navbar path={router.asPath} thispage={currentPage} />
 
-        <Box style={{ overflow: 'hidden' }}>{children}</Box>
+        <Box style={{ backgroundColor: currentPage.scheme.bg }}>{children}</Box>
       </Box>
     </Box>
   )

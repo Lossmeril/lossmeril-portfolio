@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Heading } from '@chakra-ui/react'
-import withTransition from '../components/HOC/withTransition'
+
 import { Schemes } from '../components/datasets/schemes'
 import PageTitleSection from '../components/page-title-section'
 import PageTitle from '../components/elements/page-title'
@@ -34,4 +34,4 @@ const Home: React.FC = () => {
   )
 }
 
-export default withTransition(Home, PageScheme)
+export default Home

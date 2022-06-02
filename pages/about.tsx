@@ -2,7 +2,6 @@ import React from 'react'
 import { Container, Box, Heading, Text } from '@chakra-ui/react'
 import { Schemes } from '../components/datasets/schemes'
 
-import withTransition from '../components/HOC/withTransition'
 import PageTitleSection from '../components/page-title-section'
 
 const PageScheme = Schemes.pink
@@ -26,4 +25,4 @@ const Home: React.FC = () => {
   )
 }
 
-export default withTransition(Home, PageScheme)
+export default Home
