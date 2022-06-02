@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Heading } from '@chakra-ui/react'
 
 import { Schemes } from '../components/datasets/schemes'
-import PageTitleSection from '../components/page-title-section'
+import PageTitleSection from '../components/elements/page-title-section'
 import PageTitle from '../components/elements/page-title'
 import Section from '../components/elements/section'
 
