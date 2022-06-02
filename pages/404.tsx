@@ -1,6 +1,5 @@
-import { Container, Box, Heading, Text } from '@chakra-ui/react'
+import { Container, Box, Heading } from '@chakra-ui/react'
 import ErrorMessage from '../components/404/error-messages'
-import withTransition from '../components/HOC/withTransition'
 
 const NotFound = () => {
   return (
@@ -15,4 +14,4 @@ const NotFound = () => {
   )
 }
 
-export default withTransition(NotFound)
+export default NotFound

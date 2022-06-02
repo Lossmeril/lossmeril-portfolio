@@ -6,20 +6,21 @@ export const Schemes = {
     bgDarker: colors.black,
 
     highlight: colors.green,
-    hover: colors.green
+    hover: colors.green,
+
+    menu: colors.white,
+    menuText: colors.black,
+    menuHighlight: colors.black
   },
   pink: {
     bg: colors.pink,
     bgDarker: colors.darkPink,
 
     highlight: colors.darkGray,
-    hover: colors.darkGray
-  },
-  green: {
-    bg: colors.green,
-    bgDarker: colors.darkGreen,
+    hover: colors.darkGray,
 
-    highlight: colors.darkGray,
-    hover: colors.darkGray
+    menu: colors.white,
+    menuText: colors.black,
+    menuHighlight: colors.black
   }
 }

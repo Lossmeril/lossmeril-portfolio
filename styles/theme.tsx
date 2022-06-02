@@ -21,17 +21,6 @@ const theme = extendTheme({
     darkestPink: colors.darkestPink
   },
 
-  styles: {
-    global: {
-      body: {
-        height: '100vh',
-        bg: 'green',
-        bgGradient:
-          'linear(to-br, ' + colors.green + ', ' + colors.darkGreen + ')'
-      }
-    }
-  },
-
   components: {
     Text: {
       baseStyle: {
