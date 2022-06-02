@@ -18,21 +18,23 @@ const Main = ({ children, router }) => {
   const currentPage = GetCurrentPage(router.asPath)
 
   return (
-    <Box as="main">
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Michal Špitálský" />
-        <meta name="author" content="Michal Špitálský" />
-        <meta name="author" content="Lossmeril" />
-      </Head>
+    <>
+      <PageBGs dataState={currentPage.bg} />
+      <Box as="main">
+        <Head>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta name="description" content="Michal Špitálský" />
+          <meta name="author" content="Michal Špitálský" />
+          <meta name="author" content="Lossmeril" />
+        </Head>
 
-      <PageBGs />
-      <Box>
-        <Navbar path={router.asPath} thispage={currentPage} />
+        <Box>
+          <Navbar path={router.asPath} thispage={currentPage} />
 
-        <Box style={{ backgroundColor: currentPage.scheme.bg }}>{children}</Box>
+          <Box>{children}</Box>
+        </Box>
       </Box>
-    </Box>
+    </>
   )
 }
 

@@ -2,14 +2,14 @@ import React from 'react'
 import PageTitleSection from '../components/elements/page-title-section'
 import PageTitle from '../components/elements/page-title'
 
-const Home: React.FC = () => {
+const Film: React.FC = () => {
   return (
     <>
       <PageTitleSection>
-        <PageTitle>Michal Špitálský</PageTitle>
+        <PageTitle>Film</PageTitle>
       </PageTitleSection>
     </>
   )
 }
 
-export default Home
+export default Film
