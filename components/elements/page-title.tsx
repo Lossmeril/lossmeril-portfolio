@@ -16,7 +16,7 @@ const PageTitle = ({ children }) => {
       </Heading>
       <Heading
         as="p"
-        className="page-title shadow"
+        className="page-title shadow lowercase"
         variant="site-title"
         pt={2}
         fontSize={{ base: '10vw' }}
