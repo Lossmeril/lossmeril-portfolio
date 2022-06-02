@@ -13,7 +13,8 @@ const Portfolio = ({ Component, pageProps, router }) => {
     <ChakraProvider theme={theme}>
       <Layout router={router}>
         <AnimatePresence
-          initial={false}
+          initial={true}
+          exitBeforeEnter
           onExitComplete={() => {
             if (typeof window !== 'undefined') {
               window.scrollTo({ top: 0 })
