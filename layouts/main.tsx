@@ -4,6 +4,7 @@ import Navbar from '../components/navbar'
 import { Pages } from '../components/datasets/pages'
 import PageBGs from '../components/transitions/page-bgs'
 import PageIMGs from '../components/transitions/page-imgs'
+import { useState, useEffect } from 'react'
 
 const GetCurrentPage = path => {
   let thispage
@@ -18,10 +19,20 @@ const GetCurrentPage = path => {
 const Main = ({ children, router }) => {
   const currentPage = GetCurrentPage(router.asPath)
 
+  const [offset, setOffset] = useState(0)
+
+  useEffect(() => {
+    window.onscroll = () => {
+      setOffset(window.pageYOffset)
+    }
+  }, [])
+
+  console.log(offset)
+
   return (
     <>
       <PageBGs dataState={currentPage.bg} />
-      <PageIMGs dataState={currentPage.bg} />
+      <PageIMGs dataState={currentPage.bg} dataActive={offset < 200} />
 
       <Box as="main">
         <Head>

@@ -9,6 +9,7 @@ const PageTitle = ({ children }) => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 1, ease: [0, 0, 0.58, 1] }}
+      style={{ position: 'relative', width: '100%', height: '100%' }}
     >
       <Heading
         as="h1"
