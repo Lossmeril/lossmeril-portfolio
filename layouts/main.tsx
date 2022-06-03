@@ -2,7 +2,8 @@ import Head from 'next/head'
 import { Box } from '@chakra-ui/react'
 import Navbar from '../components/navbar'
 import { Pages } from '../components/datasets/pages'
-import PageBGs from '../components/page-bgs/page-bgs'
+import PageBGs from '../components/transitions/page-bgs'
+import PageIMGs from '../components/transitions/page-imgs'
 
 const GetCurrentPage = path => {
   let thispage
@@ -20,6 +21,8 @@ const Main = ({ children, router }) => {
   return (
     <>
       <PageBGs dataState={currentPage.bg} />
+      <PageIMGs dataState={currentPage.bg} />
+
       <Box as="main">
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
