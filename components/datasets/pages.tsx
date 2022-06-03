@@ -11,19 +11,19 @@ export const Pages = {
     {
       title: 'Design',
       href: '/design',
-      scheme: '',
+      scheme: Schemes.pink,
       bg: 'graphics'
     },
     {
       title: 'Filmography',
       href: '/film',
-      scheme: '',
+      scheme: Schemes.gold,
       bg: 'film'
     },
     {
       title: 'About',
       href: '/about',
-      scheme: Schemes.pink,
+      scheme: Schemes.green,
       bg: 'about'
     }
   ]

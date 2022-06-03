@@ -2,8 +2,7 @@ import colors from '../../styles/colors.module.scss'
 
 export const Schemes = {
   base: {
-    bg: colors.darkGray,
-    bgDarker: colors.black,
+    baseText: colors.white,
 
     highlight: colors.green,
     hover: colors.green,
@@ -13,8 +12,27 @@ export const Schemes = {
     menuHighlight: colors.black
   },
   pink: {
-    bg: colors.pink,
-    bgDarker: colors.darkPink,
+    baseText: colors.white,
+
+    highlight: colors.darkGray,
+    hover: colors.darkGray,
+
+    menu: colors.white,
+    menuText: colors.black,
+    menuHighlight: colors.black
+  },
+  gold: {
+    baseText: colors.white,
+
+    highlight: colors.darkGray,
+    hover: colors.darkGray,
+
+    menu: colors.white,
+    menuText: colors.black,
+    menuHighlight: colors.black
+  },
+  green: {
+    baseText: colors.white,
 
     highlight: colors.darkGray,
     hover: colors.darkGray,

@@ -13,13 +13,19 @@ $darkestPink: #a30353;
 $darkGray: #1e1e1e;
 $black: #0a0a0a;
 
+$gold: #fcd741;
+
 :export {
   green: $green;
   darkGreen: $darkGreen;
   white: $white;
+
   pink: $pink;
   darkPink: $darkPink;
   darkestPink: $darkestPink;
+
+  gold: $gold;
+
   black: $black;
   darkGray: $darkGray;
 }
