@@ -6,6 +6,7 @@ import PageBGs from '../components/transitions/page-bgs'
 import PageIMGs from '../components/transitions/page-imgs'
 import { useState, useEffect } from 'react'
 
+// SELECTS PAGE'S VALUE FROM ARRAY BASED ON THIS PAGE'S URL
 const GetCurrentPage = path => {
   let thispage
   Pages.pages.map(page => {
@@ -17,22 +18,24 @@ const GetCurrentPage = path => {
 }
 
 const Main = ({ children, router }) => {
+  // GETS CURENT PAGE'S VALUES
   const currentPage = GetCurrentPage(router.asPath)
 
+  // WATCH SCROLL OFFSET
   const [offset, setOffset] = useState(0)
-
   useEffect(() => {
     window.onscroll = () => {
       setOffset(window.pageYOffset)
     }
   }, [])
 
-  console.log(offset)
-
   return (
     <>
+      {/*COLOURFUL BACKGROUNDS AND TRANSITION MANAGER*/}
       <PageBGs dataState={currentPage.bg} />
-      <PageIMGs dataState={currentPage.bg} dataActive={offset < 200} />
+
+      {/*FOREGROUND IMAGE AND TRANSITION MANAGER*/}
+      <PageIMGs dataState={currentPage.bg} dataActive={offset < 150} />
 
       <Box as="main">
         <Head>
