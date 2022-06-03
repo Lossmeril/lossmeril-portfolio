@@ -13,8 +13,7 @@ const NavbarItem = ({ href, path, target, children, ...props }) => {
       <Link
         className={active ? 'navbar-link active' : 'navbar-link'}
         style={{
-          fontFamily: theme.fonts.heading,
-          color: thispage.scheme.baseText
+          fontFamily: theme.fonts.heading
         }}
         _hover={{ color: thispage.scheme.hover }}
         _after={{ borderColor: thispage.scheme.highlight + ' !important' }}
@@ -30,7 +29,7 @@ const NavbarItem = ({ href, path, target, children, ...props }) => {
 const Navbar = props => {
   const { path, thispage } = props
   return (
-    <Box as="nav" w="100%" zIndex={10} {...props} position="absolute" mt={3}>
+    <Box as="nav" w="100%" zIndex={10} {...props} position="fixed" mt={3}>
       <Container display="flex" p={2} maxW="container.xl" flexWrap="wrap">
         <Stack
           direction={{ base: 'column', md: 'row' }}

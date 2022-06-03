@@ -29,13 +29,20 @@ const Main = ({ children, router }) => {
     }
   }, [])
 
+  const scrollToleranceMenu = 100
+  const scrollToleranceBG = 150
+  const scrollToleranceContent = 200
+
   return (
     <>
       {/*COLOURFUL BACKGROUNDS AND TRANSITION MANAGER*/}
       <PageBGs dataState={currentPage.bg} />
 
       {/*FOREGROUND IMAGE AND TRANSITION MANAGER*/}
-      <PageIMGs dataState={currentPage.bg} dataActive={offset < 150} />
+      <PageIMGs
+        dataState={currentPage.bg}
+        dataActive={offset < scrollToleranceBG}
+      />
 
       <Box as="main">
         <Head>
@@ -45,9 +52,17 @@ const Main = ({ children, router }) => {
           <meta name="author" content="Lossmeril" />
         </Head>
 
-        <Box>
-          <Navbar path={router.asPath} thispage={currentPage} />
+        <Navbar
+          path={router.asPath}
+          thispage={currentPage}
+          data-active={offset < scrollToleranceMenu ? 'on' : 'off'}
+          className="navbar"
+        />
 
+        <Box
+          className="content"
+          data-active={offset > scrollToleranceContent ? 'on' : 'off'}
+        >
           <Box>{children}</Box>
         </Box>
       </Box>
