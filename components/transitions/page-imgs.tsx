@@ -9,7 +9,7 @@ const PageIMGs = ({ dataState = 'home', dataActive = true }) => {
     >
       <li>
         <div className="bg-img full-screen absolute-t-l">
-          <img className="character" src="/img/bgs/chars/děda.png" />
+          <img className="character" src="/img/bgs/chars/děda.webp" />
           <img
             className="background"
             src="/img/bgs/backgrounds/smoke-green.png"
@@ -18,7 +18,7 @@ const PageIMGs = ({ dataState = 'home', dataActive = true }) => {
       </li>
       <li>
         <div className="bg-img full-screen absolute-t-l">
-          <img className="character" src="/img/bgs/chars/děda.png" />
+          <img className="character" src="/img/bgs/chars/děda.webp" />
           <img
             className="background"
             src="/img/bgs/backgrounds/smoke-green.png"
@@ -27,7 +27,7 @@ const PageIMGs = ({ dataState = 'home', dataActive = true }) => {
       </li>
       <li>
         <div className="bg-img full-screen absolute-t-l">
-          <img className="character" src="/img/bgs/chars/děda.png" />
+          <img className="character" src="/img/bgs/chars/děda.webp" />
           <img
             className="background"
             src="/img/bgs/backgrounds/smoke-green.png"
@@ -36,7 +36,7 @@ const PageIMGs = ({ dataState = 'home', dataActive = true }) => {
       </li>
       <li>
         <div className="bg-img full-screen absolute-t-l">
-          <img className="character" src="/img/bgs/chars/děda.png" />
+          <img className="character" src="/img/bgs/chars/děda.webp" />
           <img
             className="background"
             src="/img/bgs/backgrounds/smoke-green.png"

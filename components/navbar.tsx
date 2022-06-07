@@ -13,9 +13,10 @@ const NavbarItem = ({ href, path, target, children, ...props }) => {
       <Link
         className={active ? 'navbar-link active' : 'navbar-link'}
         style={{
-          fontFamily: theme.fonts.heading
+          fontFamily: theme.fonts.heading,
+          color: thispage.scheme.baseText
         }}
-        _hover={{ color: thispage.scheme.hover }}
+        _hover={{ color: thispage.scheme.hover + ' !important' }}
         _after={{ borderColor: thispage.scheme.highlight + ' !important' }}
         fontSize={{ base: '12px', md: '20px' }}
         {...props}

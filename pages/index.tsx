@@ -13,37 +13,30 @@ const Home: React.FC = () => {
         <PageTitle>Michal Špitálský</PageTitle>
       </PageTitleSection>
       <Section>
-        <SimpleGrid columns={2} position="relative">
-          <Heading
-            className="heading-left"
-            color={pageScheme.baseText}
-            zIndex={10}
-          >
-            We can
-            <br /> live in
-            <br />  a world
-            <br /> that we <br />
-            <span
-              style={{
-                color: pageScheme.highlight,
-                WebkitTextFillColor: pageScheme.highlight,
-                WebkitTextStrokeWidth: 0
-              }}
+        <SimpleGrid columns={2}>
+          <Box className="relative">
+            <Heading
+              className="heading-left"
+              color={pageScheme.baseText}
+              zIndex={10}
             >
-              design
-            </span>
-          </Heading>
-          <Box></Box>
-          <Box>
-            <Text>
-              In my younger and more vulnerable years my father gave me some
-              advice that I’ve been turning over in my mind ever since.
-            </Text>
-            <Text>
-              “Whenever you feel like criticizing anyone,” he told me, “just
-              remember that all the people in this world haven’t had the
-              advantages that you’ve had.”
-            </Text>
+              We can
+              <br /> live in
+              <br />  a world
+              <br /> that we <br />
+              <span
+                style={{
+                  color: pageScheme.highlight,
+                  WebkitTextFillColor: pageScheme.highlight,
+                  WebkitTextStrokeWidth: 0
+                }}
+              >
+                design
+              </span>
+            </Heading>
+          </Box>
+          <Box color={{ color: pageScheme.baseText }}>
+            <Text>I am a bright explosion of untamed creativity</Text>
           </Box>
         </SimpleGrid>
       </Section>
